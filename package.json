@@ -1,0 +1,49 @@
+{
+  "name": "@cristiand391/oclif-plugin-cmd-alias",
+  "version": "0.0.0",
+  "description": "git-like command aliases for oclif CLIs",
+  "author": "Cristian Dominguez",
+  "homepage": "https://github.com/cristiand391/oclif-plugin-cmd-alias",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "repository": "cristiand391/oclif-plugin-cmd-alias",
+  "files": [
+    "/lib",
+    "/oclif.manifest.json"
+  ],
+  "dependencies": {
+    "@oclif/core": "^3.19.6"
+  },
+  "devDependencies": {
+    "@types/node": "^20.6.4",
+    "@typescript-eslint/eslint-plugin": "^6.18.0",
+    "@typescript-eslint/parser": "^6.18.0",
+    "eslint": "^8.50.0",
+    "prettier": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "oclif": {
+    "commands": "./lib/commands",
+    "topicSeparator": " ",
+    "hooks": {
+      "init": "./lib/hooks/init/run-cmd"
+    }
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "scripts": {
+    "build": "rm -rf lib && tsc -p .",
+    "lint": "eslint src/**/*.ts",
+    "format": "prettier --write \"+(src)/**/*.+(ts|json)\"",
+    "prepack": "yarn build"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "bugs": "https://github.com/cristiand391/oclif-plugin-cmd-alias/issues",
+  "keywords": [
+    "oclif"
+  ]
+}
