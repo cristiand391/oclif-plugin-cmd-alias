@@ -1,6 +1,6 @@
 {
   "name": "@cristiand391/oclif-plugin-cmd-alias",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "git-like command aliases for oclif CLIs",
   "author": "Cristian Dominguez",
   "homepage": "https://github.com/cristiand391/oclif-plugin-cmd-alias",
